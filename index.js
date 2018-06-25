@@ -31,3 +31,5 @@ function calculatesFarePrice(input1,input2){
        }
     return cost;
   }
+  
+  
