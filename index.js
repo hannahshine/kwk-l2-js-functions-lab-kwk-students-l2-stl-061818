@@ -19,16 +19,15 @@ function distanceTravelledInFeet(input1,input2){
 
 function calculatesFarePrice(input1,input2){
      let cost;
-     calculatedFee
-       if (cost<400){
-       text= "Free";}
-       else if (>=400 && betweenTheTwo<=2000){
-       text="2 cents per foot"}
-       else if (betweenTheTwo>=2000 && betweenTheTwo<2500){
-       return "25"}
-       else if (betweenTheTwo>2500){
-       console.log("cannot travel that far")}
-    return Price
+     calculatedFeet=distanceTravelledInFeet(input1,input2)
+       if (calculatedFeet<=400){
+       cost=0;}
+       else if (calculatedFeet>400 && calculatedFeet<=2000){
+       cost=.02 * Math.abs(calculatedFeet-400)}
+       else if (calculatedFeet>2000 && calculatedFeet<2500){
+       cost=25;}
+       else if (calculatedFeet>2500){
+         return "cannot travel that far";
+       }
+    return cost;
   }
-  return calculatesFarePrice
-}
